@@ -1,0 +1,27 @@
+body{
+	margin: 0;
+	background-color: #1a1c33;
+}
+.index_center{
+	width: 85%;
+	min-height: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+.index_center img{
+	width: 32%;
+}
+.index_center span{
+	width: 100%;
+	float: left;
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-top: 20px;
+	text-indent:2em;
+	bottom: 20%;
+}
+
+.index_center span#para2 {
+    margin-bottom: 20px;
+}

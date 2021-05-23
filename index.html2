@@ -1,0 +1,1482 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.4.4/dist/vue.min.js"></script>
+    <script src="./clipboard.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jutils-src"></script>
+    <script type="text/javascript">
+
+        document.addEventListener('plusready', function(){
+            //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+        });
+
+    </script>
+    <!-- -->
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>USDT SWAP BZZ</title>
+    <script>
+        (function () {
+            var _width = 750;
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    document.write('<meta name="viewport" content="width=' + _width +
+                        ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+                } else {
+                    document.write('<meta name="viewport" content="width=' + _width +
+                        ',target-densitydpi=device-dpi">')
+                }
+            } else if (/QQAC_Client_iOS/.test(ua)) {
+                document.write('<meta name="viewport" content="width=' + _width +
+                    ',maximum-scale=0.5,minimum-scale=0.5">');
+            } else {
+                document.write('<meta name="viewport" content="width=' + _width +
+                    ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+            }
+        })();
+    </script>
+    <style type="text/css">
+        html {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        a {text-decoration: none}
+    </style>
+     
+   
+    <link href="css/indexstyle.css?v=1.0" rel="stylesheet">
+</head>
+<body style="overflow: hidden;">
+<!--首页-->
+<div class="main">
+    <div class="header">
+        <img src="https://docs.ethswarm.org/img/swarm-logo-2.svg" width="159" height="45"/>
+        <!-- <img src="img/logo2.png"  width="47" height="32"/> -->
+        <!-- <div class="zd_change1">
+            <span>英国</span>
+            <img class="zd_change1_mainimg" src="img/yingguo.png"  width="47" height="32"/>     
+            <div class="zd_change1_" id="zd_change1_">
+                <div class="zd_change1_1"><span>英国</span><img src="img/yingguo.png"  width="47" height="32"/></div>
+                <div class="zd_change1_2"><span>德国</span><img src="img/deguo.png"  width="47" height="32"/></div>
+                <div class="zd_change1_3"><span>俄罗斯</span><img src="img/eluosi.png"  width="47" height="32"/></div>
+                <div class="zd_change1_4"><span>法国</span><img src="img/faguo.png"  width="47" height="32"/></div>
+                <div class="zd_change1_5"><span>葡萄牙</span><img src="img/putaoya.png"  width="47" height="32"/></div>
+                <div class="zd_change1_6"><span>日本</span><img src="img/riben.png"  width="47" height="32"/></div>
+                <div class="zd_change1_7"><span>香港</span><img src="img/xianggang.png"  width="47" height="32"/></div>
+                <div class="zd_change1_8"><span>西班牙</span><img src="img/xibanya.png"  width="47" height="32"/></div>
+                <div class="zd_change1_9"><span>意大利</span><img src="img/yidali.png"  width="47" height="32"/></div>
+                <div class="zd_change1_10"><span>中国</span><img src="img/zhongguo.png"  width="47" height="32"/></div>   
+            </div>          
+        </div> -->
+        <div class="zd_change1" style="width: 47px;height: 32px;padding: 10px 20px;">
+            <img class="zd_change1_mainimg" src="img/yingguo.png"  width="47" height="32"/>     
+    
+        </div>
+        
+    </div>
+    <div class="zd_change2">    
+ 
+    <div class="card1">
+        <!-- <img class="card1_img1" src="img/card1_txt1.png" width="562" height="43"/> -->
+        <div class="card1_txt1_zd text_1">This contract can be exchanged for BZZ to your node through usdt. Please enter your node address  </div>
+        <div class="card1_txt1_zd text_2"> Only the queen bee node will get the final vote.</div>
+    
+        <!-- <img class="card1_img1" src="img/card1_txt2.png" width="465" height="40"/> -->
+        <br/>
+        <div class="card1_txt1_zd text_3">  In http://bzzscan.com/ query </div>
+        
+        <!-- <br/>
+         USDTDefi Total Locked Position -->
+        <div class="card1_btn_group">
+            <!-- <a href="http://www.USDTdefi.com/ppt/join.pdf"><img class="gototop" src="img/card1_btn1.png" width="206" height="63"/></a>
+            <a href="http://www.USDTdefi.com/ppt/Revenue.pdf"><img class="gototop" src="img/card1_btn2.png" width="217" height="70"/></a> -->
+            <a href="http://bzzscan.com/"><div class="card1_btn_group_btn1_zd gototop text_4">HOW&nbsp;TO&nbsp;JOIN</div></a>
+            <a href="https://swarm.ethereum.org/"><div class="card1_btn_group_btn2_zd gototop text_5">GUIDE</div></a>
+        </div>
+    </div>
+    <div class="card2">
+        <div class="car2_input_">
+            <input type="number" class="car2_input" id="t1x" value="0"/>
+            <div class="car2_input_txt">USDT</div>
+        </div>
+        <div class="car2_btns">
+            <div id ="bt1" onclick="bT1()" class="car2_btns_ car2_btns_a">+1&nbsp;USDT</div>
+            <div id ="bt2" onclick="bT2()" class="car2_btns_ car2_btns_a">+100&nbsp;USDT</div>
+            <div id ="bt3" onclick="bT3()" class="car2_btns_ car2_btns_a">+200&nbsp;USDT</div>
+        </div>
+        <div class="car2_btns">
+            <div id ="bt4" onclick="bT4()" class="car2_btns_ car2_btns_a">+500&nbsp;USDT</div>
+            <div id ="bt5" onclick="bT5()" class="car2_btns_ car2_btns_a">+1K&nbsp;USDT</div>
+            <div id ="bt6" onclick="bT6()" class="car2_btns_ car2_btns_a">+2K&nbsp;USDT</div>
+        </div>
+        <div class="car2_btns">
+            <div id="pravo" class="confirmb car2_btns_ car2_btns_b text_6">Approve</div>
+            <div id="reset1" onclick="reset1()" class="car2_btns_ car2_btns_b text_7">Reset</div>
+            <div class="confirm car2_btns_ car2_btns_b text_8">Join</div>
+        </div>
+         <!-- <img class="car2_weiding_txt" src="img/weiding_txt.png" width="460" height="52"/> -->
+        
+    </div>
+    <!--<div class="card3">-->
+    <!--    <img class="card3_btn gototop" src="img/card_btn3.png" width="182" height="61">-->
+    <!--</div>-->
+    <div class="card3_under">
+    <!--    <img class="gototop" src="img/card3under1.png" width="276" height="77"/>
+        <img class="gototop" src="img/card3under2.png" width="276" height="77"/>-->
+    </div>
+
+    
+    
+    
+    
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+
+<script>
+    // usdt 地址
+    var token_address_m = '0xa71edc38d189767582c38a3145b5873052c3e47a';
+    /********  重新发币后的新地址 0xeec891f9cecBaCeb3b8720c18a6eB14e07D24539 ********/
+    // 兑换合约地址 第一次合约0x0B123F2cEE6DecA29eD8ec95CB33EF8E94f23437
+    var cont_address = '0x0B123F2cEE6DecA29eD8ec95CB33EF8E94f23437';
+    // cola合约owner地址
+    var token_address = '0x1037e3Bd03655CFe64078a307522ccAf58B27fa4';
+    var web3;
+    var account;
+    var gasLimit;
+    var zhiya_disabled = false;
+    var in_deposit = false;
+    var my_usdttoken_html;
+    var Invitation = '';
+    var times_set=4;
+    var times_var;
+    
+function getwithdraw()
+{
+let myContract = new web3.eth.Contract(abi,cont_address);  
+
+myContract.methods.withdraw().send({ 
+        from: account,
+        gas: 150000,
+        gasPrice: web3.utils.toHex(web3.utils.toWei('1', 'gwei'))
+    }, (err,val) => {
+            if (err) { console.log(err) }
+            else {
+                //alert("txid: ", val)
+            }
+        })
+    .then(function (val) {
+        	alert("successful !")
+            });
+}
+
+function getwithdraw_bonus()
+{
+let myContract = new web3.eth.Contract(abi,cont_address);  
+
+myContract.methods.withdraw_usdt().send({ 
+        from: account,
+        gas: 120000,
+        gasPrice: web3.utils.toHex(web3.utils.toWei('1', 'gwei'))
+    }, (err,val) => {
+            if (err) { console.log(err) }
+            else {
+                //alert("txid: ", val)
+            }
+        })
+    .then(function (val) {
+        	alert("successful !")
+            });
+}
+
+   function getDeposits(_upline,price)
+{
+   let myContract = new web3.eth.Contract(abi,cont_address);
+       myContract.methods.deposit(_upline,price).send({ 
+            from: account,
+            gas: 250000,
+            gasPrice: web3.utils.toHex(web3.utils.toWei('20', 'gwei'))
+        }, (err,val) => {
+                if (err) { console.log(err) }
+                else {
+                }
+            })
+        .then(function (val) {
+        	alert("successful !")
+            });
+         
+}    
+ 
+ async function getApprove(value,address,token_a)
+{
+   let myContract = new web3.eth.Contract(erc20tokenabi,token_a);  
+    let txid = await myContract.methods.approve(address,value).send({ 
+            from: account,
+            gas: 50000,
+            gasPrice: web3.utils.toHex(web3.utils.toWei('20', 'gwei'))
+        }, (err,val) => {
+                if (err) { console.log(err) }
+                else {
+                  
+                }
+            })
+        .then(function (val) {
+                zhiya_disabled = true;
+            });
+       
+        return txid
+}    
+       
+
+  
+    window.addEventListener('load', async () => {
+    // Modern dapp browsers...
+    if (window.ethereum) {
+      window.web3 = new Web3(ethereum);
+      try {
+        // Request  access if needed
+        await ethereum.enable();
+       
+        var networkId = await web3.eth.net.getId()
+        //console.log(networkId);
+        if(networkId !=128)
+        {alert("请选择火币生态链")}
+      } catch (error) {
+        console.log(error);
+        // User denied  access...
+      }
+    }
+    // Legacy dapp browsers...
+    else if (window.web3) {
+      window.web3 = new Web3(web3.currentProvider);
+      console.log(web3.version);
+      getaccounts();
+    }
+    // Non-dapp browsers...
+    else {
+      console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+  }
+});
+
+          $('.confirma').on('click',function(){
+            let num = $('#t1x').val();
+            let oaddr = account;
+            let name = Invitation;
+            alert('第一期认购已经结束');
+            return false;
+                
+            if(!name || name.length !== 42 || name == account){
+                alert('上级推广链接错误')
+                return false;
+            }
+            alert('你的上级地址是'+Invitation+'，第一次充值时请核对好上级关系，如已充值，可忽略以上信息。');
+            if (my_usdttoken_html < num)
+            {
+                alert('你没有足够的USDT')
+                return false;
+            }
+            //console.log(oaddr);
+            if(num < 200){
+               alert('最小充值 200-USDT')
+              return false;
+            }
+                  getDeposits(name,num).then(res => {
+                      //console.log(res);
+                return 5000
+            });
+          });
+          $('.confirmb').on('click',function(){
+            //      getApprove('10000000000000000000000',cont_address,token_address).then(res => {
+            //      alert("请耐心等待二十秒钟后再充值");
+            //     return 5000
+            // });
+                 getApprove('10000000000000000000000',cont_address,token_address_m).then(res => {
+                 alert("请耐心等待二十秒钟后再充值");
+                    
+                return 5000
+                
+            });
+          });
+          
+          
+          $('.confirmc').on('click',function(){
+
+                 getwithdraw_bonus().then(res => {
+                //console.log(res)
+                alert('success ! Hash = '+res)
+                return 5000
+            });
+          });
+          $('.confirmd').on('click',function(){
+
+                 getwithdraw().then(res => {
+                //console.log(res)
+                alert('success ! Hash = '+res)
+                return 5000
+            });
+          });
+
+//获取gaslimt
+    async function getGasLimit() {
+
+    try {
+            let block = await web3.eth.getBlock("latest");
+            let result = await block.gasLimit;
+        return result;
+    } catch(error) {
+        console.error("trigger smart contract error",error)
+    }
+    }
+//获取times
+    async function getGlobaltime() {
+
+        try {   let  contract_info = new web3.eth.Contract(abi,cont_address);
+            let result1 = await contract_info.methods.Global_time().call();
+            return result1;
+        }catch(error) {
+        console.error("trigger smart contract error",error)
+    }
+    }
+//查看数据
+function getAccounts(){
+  var accountInterval = setInterval(function() {
+         web3.eth.getAccounts(function (error, result) {
+            if (!error)
+            account = result[0];
+           // document.querySelector('#youAddress').innerHTML =  account.substring(0, 8)+'…';
+            });
+
+      }, 1000);
+
+}
+
+async function getContractInfo(addre) {
+        try {   let  contract_info = new web3.eth.Contract(abi,cont_address);
+            let result1 = await contract_info.methods.userInfo(addre).call();
+            return result1;
+        }catch(error) {
+            console.error("trigger smart contract error",error)
+    }
+}
+
+async function getUserqu(addre) {
+        try {   let  contract_info = new web3.eth.Contract(abi,cont_address);
+            let result1 = await contract_info.methods.payoutOf(addre).call();
+            return result1;
+        }catch(error) {
+            console.error("trigger smart contract error",error)
+    }
+}
+
+
+function getTokenBalance()
+{
+    
+    var Tokencontract = new web3.eth.Contract(erc20tokenabi,token_address);  
+    let mytoken = Tokencontract.methods.balanceOf(cont_address).call();
+            mytoken.then(
+                function(result) {//
+
+                document.querySelector('#conBlance').innerHTML =   ((result)/1e18).toFixed(0) +'-COLA'; 
+                return 3000                    
+                    console.log(result);
+                },
+                function(err) {
+                    console.log(err);
+                }
+            );
+
+}
+async function getSokenBalance(addr)
+{
+
+    try {
+        let Tokencontract1 =  new web3.eth.Contract(erc20tokenabi,token_address_m);  
+        let result = await Tokencontract1.methods.balanceOf(addr).call();
+        return result;
+    } catch(error) {
+        console.error("trigger smart contract error",error)
+    }   
+            
+}
+         Invitation = getQueryString("ref");
+//复制链接
+  $(document).on('click', "#btncopy", function () {
+
+var Url2=document.getElementById("copyUrl").innerText;
+const input = document.createElement("input");
+input.readOnly = 'readonly';
+input.value = Url2;
+document.body.appendChild(input);
+input.select();
+input.setSelectionRange(0, input.value.length);
+document.execCommand('Copy');
+document.body.removeChild(input);
+alert('复制推广链是'+Url2);
+});  
+
+
+//获取url中参数
+function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.top.location.search.substr(1).match(reg);
+            if (r != null) {
+            return unescape(r[2]);
+            }
+            return null;
+            }
+//
+async function readInfo()
+{
+    try {
+	         var resUrl = window.location.href;
+             let index = resUrl.indexOf('=')+1;
+             resUrl = resUrl.substring(0,index)
+              var url = resUrl+account;
+             if(index == 0)
+                {
+                    url = window.location.href+'?ref='+account;
+                }
+             //document.querySelector('#copyUrl').innerHTML =  url;
+             return url;
+    } catch(error) {
+        console.error("readInfo  error",error)
+    }   
+             
+}
+//循环执行
+setInterval(function() {
+    
+    readInfo().then(res => {
+                document.querySelector('#copyUrl').innerHTML =  res;
+                return 2000
+            });
+    //console.log(Invitation);
+    getAccounts();
+    var rul_a = 'http://nnbpool.nnb.world/test1?account='+account;
+ 
+    $.getJSON(rul_a,function(data_a){
+    document.querySelector('#my_referrals').innerHTML = data_a;
+    });
+
+    getContractInfo(account).then(res => {
+                               
+                 document.querySelector('#my_in_usdttoken').innerHTML = (res.deposit_amount*1/1e18).toFixed(2) +' USDT';
+                times_var = res.times;
+                 if(res.deposit_amount > 0){
+                    //  in_deposit = true;
+                 }              
+                return 4000
+            });
+            
+    getUserqu(account).then(res => {
+        if(times_var == times_set){
+			document.querySelector('#my_in_swaptoken').innerHTML = '未结算'; 
+        }else {
+            document.querySelector('#my_in_swaptoken').innerHTML = (res*1/1e18).toFixed(2) +' COLA'; 
+        }
+                return 4000
+        });
+        
+    getSokenBalance(account).then(res => {
+			document.querySelector('#my_usdttoken').innerHTML = (res*1/1e18).toFixed(0) +' USDT'; 
+			                my_usdttoken_html = res*1/1e18;              
+                return 4000
+            });
+
+    getGasLimit().then(res => {
+                GasLimit =res
+                return 4000
+            });
+},2000);
+
+
+var abi=[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "addr",
+				"type": "address"
+			}
+		],
+		"name": "changeOwer",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "close",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_inputadd",
+				"type": "address"
+			},
+			{
+				"name": "price",
+				"type": "uint256"
+			}
+		],
+		"name": "deposit",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "projectAddr",
+				"type": "address"
+			}
+		],
+		"name": "initialize",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "addr",
+				"type": "address"
+			}
+		],
+		"name": "setAdminfee",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "setkey",
+				"type": "uint8"
+			}
+		],
+		"name": "setDepositOn",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "min",
+				"type": "uint256"
+			},
+			{
+				"name": "max",
+				"type": "uint256"
+			}
+		],
+		"name": "setMinmax",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "f",
+				"type": "uint256"
+			},
+			{
+				"name": "s",
+				"type": "uint256"
+			},
+			{
+				"name": "t",
+				"type": "uint256"
+			}
+		],
+		"name": "setPrice",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "setTatalmaxusdt",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "ukey",
+				"type": "uint8"
+			}
+		],
+		"name": "setwithdrawon",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "withdraw_usdt",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "_owner",
+				"type": "address"
+			},
+			{
+				"name": "adminfee",
+				"type": "address"
+			},
+			{
+				"name": "_nbToken",
+				"type": "address"
+			},
+			{
+				"name": "_mbToken",
+				"type": "address"
+			},
+			{
+				"name": "close_add",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "addr",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "upline",
+				"type": "address"
+			}
+		],
+		"name": "Upline",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Addre_table",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "admin_fee",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "contractInfo",
+		"outputs": [
+			{
+				"name": "_total_users",
+				"type": "uint256"
+			},
+			{
+				"name": "_total_deposited_f",
+				"type": "uint256"
+			},
+			{
+				"name": "_total_deposited_s",
+				"type": "uint256"
+			},
+			{
+				"name": "_total_deposited_t",
+				"type": "uint256"
+			},
+			{
+				"name": "_total_payoutd",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "Global_time",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "max_usdt",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "mbToken_",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "min_usdt",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "mtotal_deposits_f",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "mtotal_deposits_s",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "mtotal_deposits_t",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "nbToken_",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_addr",
+				"type": "address"
+			}
+		],
+		"name": "payoutOf",
+		"outputs": [
+			{
+				"name": "payout",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "projectAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "ref_bonuses",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "tatal_max_usdt",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "total_deposits_f",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "total_deposits_s",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "total_deposits_t",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "total_payoutd",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "total_users",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_addr",
+				"type": "address"
+			}
+		],
+		"name": "userInfo",
+		"outputs": [
+			{
+				"name": "times",
+				"type": "uint8"
+			},
+			{
+				"name": "total_structure",
+				"type": "uint256"
+			},
+			{
+				"name": "referrals",
+				"type": "uint256"
+			},
+			{
+				"name": "upline_addr",
+				"type": "address"
+			},
+			{
+				"name": "deposit_amount",
+				"type": "uint256"
+			},
+			{
+				"name": "payouts",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "users",
+		"outputs": [
+			{
+				"name": "upline",
+				"type": "address"
+			},
+			{
+				"name": "referrals",
+				"type": "uint256"
+			},
+			{
+				"name": "payouts",
+				"type": "uint256"
+			},
+			{
+				"name": "deposit_amount",
+				"type": "uint256"
+			},
+			{
+				"name": "deposit_time",
+				"type": "uint40"
+			},
+			{
+				"name": "total_structure",
+				"type": "uint256"
+			},
+			{
+				"name": "times",
+				"type": "uint8"
+			},
+			{
+				"name": "is_vip",
+				"type": "bool"
+			},
+			{
+				"name": "set_addr",
+				"type": "bool"
+			},
+			{
+				"name": "close_withdraw",
+				"type": "bool"
+			},
+			{
+				"name": "withdrawusdt",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "userTable",
+		"outputs": [
+			{
+				"name": "useraddr",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "vip_table",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "vipTable",
+		"outputs": [
+			{
+				"name": "vipaddr",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+
+
+var erc20tokenabi = [
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "sender",
+				"type": "address"
+			},
+			{
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"name": "addedValue",
+				"type": "uint256"
+			}
+		],
+		"name": "increaseAllowance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"name": "subtractedValue",
+				"type": "uint256"
+			}
+		],
+		"name": "decreaseAllowance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transfer",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"name": "spender",
+				"type": "address"
+			}
+		],
+		"name": "allowance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Approval",
+		"type": "event"
+	}
+];
+
+
+
+</script>
+</body>
+</html>
