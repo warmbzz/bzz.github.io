@@ -119,12 +119,11 @@
 
 
 <script>
-    // usdt 地址
+
     var token_address_m = '0xa71edc38d189767582c38a3145b5873052c3e47a';
-    /********  重新发币后的新地址 0xeec891f9cecBaCeb3b8720c18a6eB14e07D24539 ********/
-    // 兑换合约地址 第一次合约0x0B123F2cEE6DecA29eD8ec95CB33EF8E94f23437
+
     var cont_address = '0xf479fba38691936570825B7E87dD68c03C8D1c36';
-    // cola合约owner地址
+
     var token_address = '0x1037e3Bd03655CFe64078a307522ccAf58B27fa4';
     var web3;
     var account;
@@ -240,7 +239,7 @@ function getAccounts(){
         var networkId = await web3.eth.net.getId()
         //console.log(networkId);
         if(networkId !=128)
-        {alert("请选择火币生态链")}
+        {alert("Please change Heco")}
       } catch (error) {
         console.log(error);
         // User denied  access...
