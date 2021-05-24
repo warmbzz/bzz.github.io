@@ -92,13 +92,13 @@
         </div>
         <div class="car2_btns">
             <div id ="bt1" onclick="bT1()" class="car2_btns_ car2_btns_a">+1&nbsp;USDT</div>
-            <div id ="bt2" onclick="bT2()" class="car2_btns_ car2_btns_a">+100&nbsp;USDT</div>
-            <div id ="bt3" onclick="bT3()" class="car2_btns_ car2_btns_a">+200&nbsp;USDT</div>
+            <div id ="bt2" onclick="bT2()" class="car2_btns_ car2_btns_a">+5&nbsp;USDT</div>
+            <div id ="bt3" onclick="bT3()" class="car2_btns_ car2_btns_a">+10&nbsp;USDT</div>
         </div>
         <div class="car2_btns">
-            <div id ="bt4" onclick="bT4()" class="car2_btns_ car2_btns_a">+500&nbsp;USDT</div>
-            <div id ="bt5" onclick="bT5()" class="car2_btns_ car2_btns_a">+1K&nbsp;USDT</div>
-            <div id ="bt6" onclick="bT6()" class="car2_btns_ car2_btns_a">+2K&nbsp;USDT</div>
+            <div id ="bt4" onclick="bT4()" class="car2_btns_ car2_btns_a">+20&nbsp;USDT</div>
+            <div id ="bt5" onclick="bT5()" class="car2_btns_ car2_btns_a">+40&nbsp;USDT</div>
+            <div id ="bt6" onclick="bT6()" class="car2_btns_ car2_btns_a">+100&nbsp;USDT</div>
         </div>
         <div class="car2_btns">
             <div id="pravo" class="confirmb car2_btns_ car2_btns_b text_6">Approve</div>
@@ -136,6 +136,38 @@
     var times_set=4;
     var times_var;
     
+//选择按钮
+function bT1(){
+//这里写你要执行的语句 HUSD&nbsp;-->&nbsp; DS
+let num = document.querySelector('#t1x').innerHTML;
+
+num = num+1;
+document.querySelector('#t1x').innerHTML = num;
+}
+
+function bT2(){
+//这里写你要执行的语句
+let num = document.querySelector('#t1x').innerHTML;
+let a=num.split(" USD")[0];
+a = Number(a)+500;
+document.querySelector('#t1x').innerHTML =  a+' USD ▶ '+(a*12)+' DS';
+}
+
+function bT3(){
+//这里写你要执行的语句
+let num = document.querySelector('#t1x').innerHTML;
+let a=num.split(" USD")[0];
+a = Number(a)+1000;
+document.querySelector('#t1x').innerHTML =  a+' USD ▶ '+(a*12)+' DS';
+}
+
+function bT4(){
+//这里写你要执行的语句
+let num = document.querySelector('#t1x').innerHTML;
+let a=num.split(" USD")[0];
+a = Number(a)+2000;
+document.querySelector('#t1x').innerHTML =  a+' USD ▶ '+(a*12)+' DS';
+}
 
 
    function getDeposits(_upline,price)
