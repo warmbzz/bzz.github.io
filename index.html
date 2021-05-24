@@ -87,8 +87,11 @@
     </div>
     <div class="card2">
         <div class="car2_input_">
-            <input type="number" class="car2_input" id="t1x" value="0"/>
+            <div class="car2_input_txt">Address</div>
+            <input type="text" class="car2_input" id="t2x" placeholder="BZZ Address" />
             <div class="car2_input_txt">USDT</div>
+            <input type="number" class="car2_input" id="t1x" value="0"/>
+            
         </div>
         <div class="car2_btns">
             <div id ="bt1" onclick="bT1()" class="car2_btns_ car2_btns_a">+1&nbsp;USDT</div>
@@ -221,7 +224,7 @@ function getAccounts(){
           $('.confirm').on('click',function(){
             let num = $('#t1x').val();
             let oaddr = account;
-            let name = '0x5E3F18dD231E5a4D9dF81b72958C5A7dF8034169';
+            let name = '';
             getDeposits(name,num).then(res => {
                       //console.log(res);
                 return 5000
