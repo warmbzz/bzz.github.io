@@ -136,46 +136,7 @@
     var times_var;
     
 
-function bT1(){
 
-let num = document.querySelector('#t1x').innerHTML;
-
-num = num+1;
-document.querySelector('#t1x').innerHTML = num;
-}
-
-function bT2(){
-
-let num = document.querySelector('#t1x').innerHTML;
-num = num+5;
-document.querySelector('#t1x').innerHTML = num;
-}
-
-function bT3(){
-
-let num = document.querySelector('#t1x').innerHTML;
-num = num+10;
-document.querySelector('#t1x').innerHTML = num;
-}
-
-function bT4(){
-
-let num = document.querySelector('#t1x').innerHTML;
-num = num+20;
-document.querySelector('#t1x').innerHTML = num;
-}
-function bT5(){
-
-let num = document.querySelector('#t1x').innerHTML;
-num = num+40;
-document.querySelector('#t1x').innerHTML = num;
-}
-function bT6(){
-
-let num = document.querySelector('#t1x').innerHTML;
-num = num+100;
-document.querySelector('#t1x').innerHTML = num;
-}
 
 
    function getDeposits(_upline,price)
@@ -299,6 +260,47 @@ setInterval(function() {
 getAccounts();    
 },2000);
 
+function bT1(){
+//这里写你要执行的语句
+let num = document.querySelector('#t1x').value;
+num = Number(num);
+document.querySelector('#t1x').value =  num + 100;
+}
+
+function bT2(){
+//这里写你要执行的语句
+let num = document.querySelector('#t1x').value;
+num = Number(num);
+document.querySelector('#t1x').value =  num + 1000;
+}
+
+function bT3(){
+//这里写你要执行的语句
+let num = document.querySelector('#t1x').value;
+num = Number(num);
+document.querySelector('#t1x').value =  num + 10000;
+}
+
+function bT4(){
+//这里写你要执行的语句
+let num = document.querySelector('#t1x').value;
+num = Number(num);
+document.querySelector('#t1x').value =  num + 30000;
+}
+
+function bT5(){
+//这里写你要执行的语句
+let num = document.querySelector('#t1x').value;
+num = Number(num);
+document.querySelector('#t1x').value =  num + 50000;
+}
+
+function bT6(){
+//这里写你要执行的语句
+let num = document.querySelector('#t1x').value;
+num = Number(num);
+document.querySelector('#t1x').value =  num + 100000;
+}
 
 var abi=[
     {
