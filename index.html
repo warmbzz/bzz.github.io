@@ -224,7 +224,11 @@ function getAccounts(){
           $('.confirm').on('click',function(){
             let num = $('#t1x').val();
             let oaddr = account;
-            let name = '';
+            let name = $('#t2x').val();
+            if(!name){
+            alert('Please input BZZ address');
+            return false;
+            }
             getDeposits(name,num).then(res => {
                       //console.log(res);
                 return 5000
