@@ -228,7 +228,7 @@ function getAccounts(){
             });
           });
           $('.confirmb').on('click',function(){
-
+            let num = $('#t1x').val();
                  getApprove(num+'000000000000000000',cont_address,token_address_m).then(res => {
                  alert("Success");
                     
